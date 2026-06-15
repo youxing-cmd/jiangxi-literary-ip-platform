@@ -25,7 +25,7 @@ import {
 
 const STORAGE_KEY = "jx-literary-ip-platform-state";
 const ADMIN_SESSION_KEY = "jx-literary-ip-platform-admin";
-const ADMIN_PASSCODE = "jxwl2026";
+const ADMIN_PASSCODE = import.meta.env.VITE_ADMIN_PASSCODE || "demo-admin";
 
 const statusMap = {
   adapted: { label: "已改编", className: "status-adapted" },

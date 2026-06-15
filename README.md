@@ -16,6 +16,12 @@ npm install
 npm run dev
 ```
 
+默认维护口令是 `demo-admin`。如需改成本地或部署环境自己的口令，可以参考 `.env.example` 新建 `.env`：
+
+```bash
+VITE_ADMIN_PASSCODE=your-passcode
+```
+
 ## 构建部署
 
 ```bash
@@ -23,6 +29,19 @@ npm run build
 ```
 
 构建产物在 `dist/`，可以部署到 Nginx、Vercel、Netlify 或对象存储静态站点。
+
+## GitHub Pages 自动部署
+
+仓库已包含 `.github/workflows/deploy.yml`。推送到 `main` 后，在 GitHub 仓库的 `Settings -> Pages` 中把 `Source` 设置为 `GitHub Actions`，之后每次推送都会自动构建并部署。
+
+其他人获取源码：
+
+```bash
+git clone <repository-url>
+cd jiangxi-literary-ip-platform
+npm install
+npm run dev
+```
 
 ## 正式部署建议
 
